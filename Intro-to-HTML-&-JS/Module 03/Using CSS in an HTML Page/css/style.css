@@ -3,7 +3,7 @@ body {
 }
 header {
     font-size: x-large;
-    font-style: bold;
+    font-weight: bold;
     text-align: center;
     background-color: linear-gradient(#051118, #5C373C);
     color: #CAA893;
