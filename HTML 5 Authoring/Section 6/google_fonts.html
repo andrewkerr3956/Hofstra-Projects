@@ -15,34 +15,13 @@
             border: 1px solid #FA6900;
         }
 
-        #header1 {
-            font-family: 'Anton', sans-serif;
-        }
-
-        #header2 {
-            font-family: 'Source Code Pro', monospace;
-            font-stretch: wider;
-        }
-
-        #header3 {
-            font-family: 'Caveat', cursive;
-            font-weight: bold;
-            font-variant: initial;
-        }
-        
-        #header4 {
-            font-family: 'Indie Flower', cursive;
-            font-style: italic;
-            color: royalblue;
-        }
-
         .f1 {
-            font-family: 'Amatic SC', cursive;
+            font-family: 'Caveat', cursive;
             font-size: 2em;
         }
 
-        .f1 > p {
-            font-weight: 700;
+        .f1 p {
+            font-weight: 400;
         }
 
         .f2 {
@@ -51,14 +30,19 @@
             font-size: 0.9em;
         }
 
-        .f2 > p > p {
-            font-weight: 500;
+        .f2 p {
+            font-weight: 600;
         }
 
         .f3 {
-            font-family: 'Architects Daughter', cursive;
+            font-family: 'Source Code Pro', monospace;
             color: lightseagreen;
+            font-style: italic;
             font-size: 1em;
+        }
+
+        .f3 p {
+            font-weight: 600;
         }
 
         .f4 {
@@ -69,9 +53,10 @@
             font-size: 1.5em;
         }
 
-        .f4 > p {
-            font-weight: 0;
+        .f4 p {
+            font-weight: 300;
         }
+
     </style>
 </head>
 
@@ -79,7 +64,7 @@
     <table>
         <tr>
             <td>
-                <H1 id="header1">This Is My Favorite Typeface</H1>
+                <H1 class="f1" style="font-weight: 600;">This Is My Favorite Typeface</H1>
                 <div class="f1">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.</p>
@@ -89,7 +74,7 @@
                 </div>
             </td>
             <td>
-                <H1 id="header2">This Is My Second Favorite Typeface</H1>
+                <H1 class="f2" style="font-weight: 500;">This Is My Second Favorite Typeface</H1>
                 <div class="f2">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.</p>
@@ -102,7 +87,7 @@
         </tr>
         <tr>
             <td>
-                <H1 id="header3">This Is Another Favorite Typeface</H1>
+                <H1 class="f3" style="font-weight: 200;">This Is Another Favorite Typeface</H1>
                 <div class="f3">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.</p>
@@ -114,7 +99,7 @@
 
             </td>
             <td>
-                <H1 id="header4">This Is Another Favorite Typeface</H1>
+                <H1 class="f4" style="font-weight: 200;">This Is Another Favorite Typeface</H1>
                 <div class="f4">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.</p>
