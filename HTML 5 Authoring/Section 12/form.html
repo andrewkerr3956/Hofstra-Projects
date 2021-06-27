@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>HTML Form</title>
+    <style>
+        label {
+            font-weight: bold;
+        }
+        section {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML Form</h1>
+    <form action="#" method="POST">
+        <section>
+            <label for="fullName">Please enter your full name:</label> <br />
+            <input type="text/input" id="fullName" name="fullName" />
+        </section>
+        <section>
+            <label for="gender">Please choose your gender:</label> <br />
+            <input type="radio" name="gender" value="Male">Male</input> <br />
+            <input type="radio" name="gender" value="Female">Female</input> 
+        </section>
+        <section>
+            <label for="sport">Please choose your favorite sport:</label> <br />
+            <select name="sport">
+                <option name="sport" value="Basketball">Basketball</option>
+                <option name="sport" value="Baseball">Baseball</option>
+                <option name="sport" value="Football">Football</option>
+                <option name="sport" value="Soccer">Soccer</option>
+                <option name="sport" value="Hockey">Hockey</option>
+                <option name="sport" value="Tennis">Tennis</option>
+            </select>
+        </section>
+        <section>
+            <label for="entertainment">Please choose from the list that you enjoy:</label> <br />
+            <input type="checkbox" name="entertainment" value="videogames">Video Games</input> <br />
+            <input type="checkbox" name="entertainment" value="television">Watching TV</input> <br />
+            <input type="checkbox" name="entertainment" value="coding">Learning to Code</input> <br />
+            <input type="checkbox" name="entertainment" value="walking">Going for Walks</input> <br />
+            <input type="checkbox" name="entertainment" value="relaxing">Just Relaxing</input> <br />
+        </section>
+        <section>
+            <label for="phoneNum">Please enter your phone number:</label> <br />
+            <input type="tel" id="phoneNum" name="phoneNum" />
+        </section>
+        <section>
+            <label for="emailAddress">Please enter your e-mail address:</label> <br />
+            <input type="email" id="emailAddress" name="emailAddress" />
+        </section>
+        <section>
+            <label for="age">Please enter your age: </label> <br />
+            <input type="number" id="age" name="age" />
+        </section>
+        <section>
+            <label for="dob">Please enter your DOB:</label> <br />
+            <input type="date" id="dob" name="dob" />
+        </section>
+        <section>
+            <label for="password">Please enter a password:</label> <br />
+            <input type="password" id="password" name="password" />
+        </section>
+        <section>
+            <input type="submit" id="formSubmit" value="Submit" />
+        </section>
+    </form>
+</body>
+
+</html>

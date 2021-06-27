@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Contact Us</title>
+        <style>
+            body {
+                background-color:burlywood;
+            }
+            section {
+                margin-top: 20px;
+            }
+            label {
+                font-weight: bold;
+            }
+            button {
+                border-radius: 5px;
+                background-color:lightskyblue;
+            }
+            #container {
+                border:2px lightseagreen solid;
+                background-color:khaki;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <form action="#" method="POST">
+                <section>
+                    <label for="firstName">Please enter your first name: </label> <br />
+                    <input type="text" id="firstName" name="firstName" />
+                </section>
+                <section>
+                    <label for="lastName">Please enter your last name: </label> <br />
+                    <input type="text" id="lastName" name="lastName" />
+                </section>
+                <section>
+                    <label for="emailAddress">Please enter your e-mail address: </label> <br />
+                    <input type="email" id="emailAddress" name="emailAddress" />
+                </section>
+                <section>
+                    <label for="phoneNum">Please enter your phone number: </label> <br />
+                    <input type="tel" id="phoneNum" name="phoneNum" />
+                </section>
+                <section>
+                    <label for="comment">Please enter any comments you may have: </label> <br />
+                    <textarea id="comment" name="comment" rows="10" cols="30"></textarea>
+                </section>
+                <section>
+                    <a href="buttons.html">
+                        <button type="reset" id="reset" name="reset">Reset</button>
+                    </a>
+                    <a href="buttons.html">
+                        <button type="submit" id="submit" name="submit">Submit</button>
+                    </a>
+                </section>
+                <section>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <button type="button">Visit Us</button>
+                    </a>
+                </section>
+            </form>
+        </div>
+    </body>
+</html>
