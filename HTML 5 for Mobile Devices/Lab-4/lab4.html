@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Lab 4</title>
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        #footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" class="ui-content">
+        <div data-role="header">
+            <h2>JQuery Mobile Basics</h2>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                    <li><a href="#">Page 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="main">
+            <button class="ui-btn">I'm a button!</button>
+            <a href="https://www.google.com" class="ui-btn" target="blank">I'm a link!</a>
+            <button class="ui-btn ui-corner-all">I'm a rounded button!</button>
+            <button class="ui-btn ui-shadow">I'm a button with a shadow effect!</button>
+            <a href="#popupWindow" data-rel="popup" class="ui-btn">I'm a button that displays a popup!</a>
+            <div data-role="popup" id="popupWindow">
+                <div data-role="header">
+                    <h2>Popup</h2>
+                </div>
+                <div data-role="main" class="ui-content">
+                    <p>I'm a popup, woo!</p>
+                </div>
+            </div> <!-- ends popup-->
+            <div data-role="popup" id="aboutPopup">
+                <div data-role="header">
+                    <h2>About</h2>
+                </div>
+                <div data-role="main" class="ui-content">
+                    <p>This is Lab 4 in the HTML 5 for Mobile Devices course.</p>
+                    <p>This is testing how well the jQuery Mobile Library works.</p>
+                </div>
+            </div> <!-- ends aboutPopup -->
+            <div data-role="popup" id="helpPopup">
+                <div data-role="header">
+                    <h2>Help</h2>
+                </div>
+                <div data-role="main" class="ui-content">
+                    <p>Customer service is unavailable at this time.</p>
+                </div>
+            </div>
+        </div> <!-- ends page main-->
+        <div data-role="footer" id="footer">
+            <div data-role="toolbar" style="text-align: center;">
+                <a href="#aboutPopup" data-rel="popup" class="ui-btn ui-icon-info ui-btn-icon-left">About</a>
+                <a href="#helpPopup" data-rel="popup" class="ui-btn ui-icon-phone ui-btn-icon-left">Help</a>
+            </div> <!-- ends toolbar -->
+        </div> <!-- ends page footer -->
+    </div>
+</body>
+
+</html>
