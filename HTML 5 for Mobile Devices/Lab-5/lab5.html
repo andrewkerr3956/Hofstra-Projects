@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Lab 5</title>
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/hammer-min.js"></script>
+    <script>
+        window.onload = function() {
+            var height = window.innerHeight - 100;
+            document.getElementById("main").style.height = height + "px";
+            var main = document.getElementById("main");
+            var hammer = new Hammer(main);
+            hammer.on("tap press", function(event) {
+                if(event.type == "tap") {
+                    main.innerHTML = "Tap";
+                }
+                else {
+                    main.innerHTML = "Press";
+                }
+            });
+            hammer.on("swipeleft swiperight", function(event) {
+                main.innerHTML = "Swiped";
+            });
+        }
+    </script>
+    <style>
+        #footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+        }
+
+        #main {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h2>Gestures</h2>
+        </div>
+        <div data-role="main" class="ui-content" id="main">
+
+        </div>
+        <div data-role="footer" id="footer">
+            <h2>Lab 5</h2>
+        </div>
+    </div>
+</body>
+
+</html>
