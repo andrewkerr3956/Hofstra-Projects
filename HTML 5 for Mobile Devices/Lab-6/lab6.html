@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/employee.js"></script>
+    <script>
+        window.onload = function() {
+            document.getElementById("save").addEventListener("click", saveData);
+            if (localStorage.employee) {
+                var theEmployee = JSON.parse(localStorage.employee);
+                document.getElementById("name").value = theEmployee.empname;
+                document.getElementById("jobtitle").value = theEmployee.jobtitle;
+                document.getElementById("company").value = theEmployee.company;
+            }
+
+            function saveData(data) {
+                var name = document.getElementById("name").value;
+                var jobtitle = document.getElementById("jobtitle").value;
+                var company = document.getElementById("company").value;
+                var theEmployee = new employee(name, jobtitle, company);
+                localStorage.employee = JSON.stringify(theEmployee);
+                $.mobile.changePage("#welcome", {transition: "slideup", changehash: false});
+                document.getElementById("welcome_main").innerHTML = "<h1>Welcome, " + name + "</h1>";
+            }
+        }
+    </script>
+    <style>
+        #footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="login">
+        <div data-role="header">
+            <h2>Storage</h2>
+        </div>
+        <div data-role="main" id="main" class="ui-content">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name"/>
+            <label for="jobtitle">Job Title:</label>
+            <input type="text" name="jobtitle" id="jobtitle" placeholder="Enter your job title" />
+            <label for="company">Company:</label>
+            <input type="text" name="company" id="company" placeholder="Enter your company name" />
+            <a href="#" class="ui-btn" id="save">Save</a>
+        </div>
+        <div data-role="footer" id="footer">
+            <h2>Lab 6</h2>
+        </div>
+    </div>
+    <div data-role="page" id="welcome">
+        <div data-role="header" id="welcome_header">
+            <h2>Storage</h2>
+        </div>
+        <div data-role="main" id="welcome_main" class="ui-content">
+            
+        </div>
+        <div data-role="footer" id="welcome_footer" id="footer">
+            <h2>Lab 6</h2>
+        </div>
+    </div>
+</body>
+
+</html>
