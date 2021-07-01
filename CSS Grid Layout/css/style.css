@@ -1,0 +1,48 @@
+/* CSS reset. Source: https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+margin: 0;
+padding: 0;
+}
+
+h2 {
+    font-size: 3.2rem;
+    margin-left: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-child {
+    background-color: lightseagreen;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    grid-template-rows: repeat(2, 125px);
+    justify-content: center;
+    justify-content: space-between;
+    background-color: lightcyan;
+    font-size: 30px;
+    margin: 30px;
+    grid-gap: 10px;
+    border: 1px;
+    height: 250px;
+    /*align-content: start */
+    /* grid-gap: 50px 4%; */
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
