@@ -1,0 +1,45 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 800;
+}
+
+.error, .warning, .success, .alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #222;
+  border: 2px solid #eee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.error p, .warning p, .success p, .alert p {
+  margin: 0;
+}
+
+.success {
+  border-color: #b7c11e;
+  background: rgba(183, 193, 30, 0.8);
+}
+
+.warning {
+  border-color: #23a38f;
+  background: rgba(35, 163, 143, 0.8);
+}
+
+.error {
+  border-color: #f0563d;
+  background: rgba(240, 86, 61, 0.8);
+}
+
+/*# sourceMappingURL=main.css.map */
