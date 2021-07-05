@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    background-color: lightcyan;
+    font-size: 30px;
+    margin: 30px;
+    align-content: center;
+    grid-template-rows: 100px;
+    justify-items: center;
+    align-items: center;
+   }
+   .grid-child {
+    background-color: lightseagreen;
+    border: 1px solid black;
+    padding: 10px;
+   }
+   .grid-child.special {
+    background-color: lightgreen;
+    align-self: start;
+    justify-self: start;
+   }

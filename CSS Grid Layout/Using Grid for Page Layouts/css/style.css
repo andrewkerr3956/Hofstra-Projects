@@ -1,0 +1,113 @@
+/* CSS reset. Source: https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* Media Queries */
+@media screen and (min-width: 576px) {
+    header {
+      display: grid;
+      grid-template-columns: 40% 60%;
+    }
+    header::after {
+      display: none;
+    }
+    .header-navigation {
+      display: inline-block;
+    }
+    .menu-list {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .menu-item {
+      border: 1px solid black;
+      background-color: deepskyblue;
+      margin: 1rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .portfolio-list {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+}
+@media screen and (min-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .section-banner {
+        grid-area: "banner";
+    }
+    .section-info {
+        grid-area: "info";
+    }
+    .section-portfolio {
+        grid-area: "portfolio";
+    }
+    .section-contact {
+        grid-area: "contact";
+    }
+    main {
+        display: grid;
+        grid-template-areas:
+          "banner info"
+          "portfolio portfolio"
+          "contact contact";
+    }
+    .portfolio-list {
+        grid-template-columns: auto auto auto;
+    }
+}
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+.header-navigation {
+    display: none;
+}
+header::after {
+    content: "Menu";
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    margin-right: 3rem;
+}
+header {
+    background-color: yellowgreen;
+   }
+.header-navigation {
+    display: none;
+}
+.section-banner {
+    background-color: dodgerblue;
+}
+.section-info {
+    background-color: lightcoral;
+}
+.section-portfolio {
+    background-color: chartreuse;
+}
+.section-contact {
+    background-color: goldenrod;
+}
+footer {
+    background-color: lightseagreen;
+}
+.portfolio-list {
+    list-style: none;
+}
+.portfolio-item {
+    background-color: lightyellow;
+    border: 1px solid black;
+}
+.container {
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    margin: 0 auto;
+    border: 1px solid black;
+}
