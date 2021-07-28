@@ -7,3 +7,45 @@
     background-color: deepskyblue;
     border-color: deepskyblue;
 }
+
+.first {
+    background-color: deepskyblue;
+}
+.second {
+    background-color: deeppink;
+}
+.third {
+    background-color: darkorange;
+}
+.row {
+    background-color: lightcyan;
+}
+
+.carousel {
+    width: 900px;
+}
+
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-indicators {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-indicators li {
+    background-color: red;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-caption h3, 
+.carousel-caption p {
+    color: white;
+}
+
+.lightblue {
+    background-color: lightblue;
+    outline: 1px solid deepskyblue;
+    width: 250px;
+}
