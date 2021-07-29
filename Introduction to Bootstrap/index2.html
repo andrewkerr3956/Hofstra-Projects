@@ -16,35 +16,43 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler d-sm-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <div class="row scrollspy-container">
+        <nav class="navbar col-3 flex-column" id="scrollspy-example">
+            <a class="navbar-brand" href="#">Races</a>
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#spielberg">
+                        Race 1: Spielberg
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#silverstone">
+                        Race 2: Silverstone
+                    </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#austin">
+                        Race 3: Austin
+                    </a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+        </nav>
+        <div data-spy="scroll" 
+             data-target="#scrollspy-example" 
+             data-offset="0"
+             class="scrollspy-dimensions col">
+            <h3 id="spielberg">Spielberg Racetrack</h3>
+            <p>Length: 5.941km</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h3 id="silverstone">Silverstone Circuit</h3>
+            <p>Length: 5.891km</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h3 id="austin">Austin Racetrack</h3>
+            <p>Length: 5.513km</p>
+            <p>Lorem ipsum dolor sit amet.</p>
         </div>
-    </nav>
+    </div>
+     
     <h1>Hello Bootstrap!</h1>
     <ul class="js-github-container">
     </ul>
@@ -232,6 +240,69 @@
             <div class="lightblue">9</div>
         </div>
     </main>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" id="spielberg-tab" href="#spielberg" aria-controls="spielberg" data-toggle="tab">
+                Round 1: Spielberg
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="silverstone-tab" href="#silverstone" aria-controls="silverstone" data-toggle="tab">
+                Round 2: Silverstone
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                Round 3: Austin
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane show active" id="spielberg" role="tabpanel" aria-labelledby="spielberg-tab">
+            <h3>Spielberg Racetrack</h3>
+            <p>Length: 5.941km</p>
+        </div>
+        <div class="tab-pane" id="silverstone" role="tabpanel" aria-labelledby="silverstone-tab">
+            <h3>Silverstone Circuit</h3>
+            <p>Length: 5.891km</p>
+        </div>
+    </div>
+    <div id="accordion-sample">
+        <div class="card">
+            <div class="card-header" id="accordion-heading-one">
+                <h4>
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#accordion-collapse-one"
+                        aria-expanded="true" aria-controls="accordion-collapse-one">
+                        Heading One
+                    </button>
+                </h4>
+            </div>
+            <div id="accordion-collapse-one" class="collapse show" aria-labelledby="accordion-heading-one"
+                data-parent="#accordion-sample">
+                <div class="card-body">
+                    Sample content
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="accordion-heading-two">
+                <h4>
+                    <button class="btn btn-link" data-toggle="collapse" aria-expanded="false"
+                        data-target="#accordion-collapse-two" aria-controls="accordion-collapse-two">
+                        Heading Two
+                    </button>
+                </h4>
+            </div>
+            <div id="accordion-collapse-two" class="collapse" aria-labelledby="accordion-heading-two"
+                data-parent="#accordion-sample">
+                <div class="card-body">
+                    Sample content
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"

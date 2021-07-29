@@ -49,3 +49,20 @@
     outline: 1px solid deepskyblue;
     width: 250px;
 }
+
+.scrollspy-dimensions {
+    height: 150px; 
+    overflow-y: scroll; 
+    position: relative;
+}
+
+.scrollspy-container {
+    border: 1px solid black;
+}
+
+.scrollspy-dimensions {
+    height: 200px; 
+    margin: 0 1rem;
+    overflow-y: scroll; 
+    position: relative;
+}
