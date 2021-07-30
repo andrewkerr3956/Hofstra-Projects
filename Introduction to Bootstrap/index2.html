@@ -12,6 +12,7 @@
         integrity="sha384-9-PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -37,10 +38,7 @@
                 </li>
             </ul>
         </nav>
-        <div data-spy="scroll" 
-             data-target="#scrollspy-example" 
-             data-offset="0"
-             class="scrollspy-dimensions col">
+        <div data-spy="scroll" data-target="#scrollspy-example" data-offset="0" class="scrollspy-dimensions col">
             <h3 id="spielberg">Spielberg Racetrack</h3>
             <p>Length: 5.941km</p>
             <p>Lorem ipsum dolor sit amet.</p>
@@ -52,7 +50,7 @@
             <p>Lorem ipsum dolor sit amet.</p>
         </div>
     </div>
-     
+
     <h1>Hello Bootstrap!</h1>
     <ul class="js-github-container">
     </ul>
@@ -301,8 +299,114 @@
             </div>
         </div>
     </div>
-
-
+    <div class="btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-warning active">
+            <input type="checkbox" checked> I accept the T&C.
+        </label>
+    </div>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-success active">
+            <input type="radio" name="options" id="first" autocomplete="off" checked> First
+        </label>
+        <label class="btn btn-warning">
+            <input type="radio" name="options" id="second" autocomplete="off"> Second
+        </label>
+        <label class="btn btn-danger">
+            <input type="radio" name="options" id="third" autocomplete="off"> Third
+        </label>
+    </div>
+    <form class="container-fluid" action="#" method="POST">
+        <div class="form-group row">
+            <div class="col col-md-6 offset-md-3">
+                <label class="container-fluid p-0">
+                    Name
+                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter your name"
+                        required />
+                </label>
+                <small id="emailHelp" class="form-text text-muted col-12">
+                    * This field is mandatory.
+                </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col col-md-6 offset-md-3">
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" class="form-control" id="password" placeholder="Enter your email" required />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col col-md-6 offset-md-3">
+                <label for="textarea">
+                    Example textarea
+                </label>
+                <textarea class="form-control" id="textarea" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col col-md-6 offset-md-3">
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="form-group">
+        <label for="email" class="col-form-label">Email:</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="fa fa-user"></i>
+                </span>
+            </div>
+            <input type="email" class="form-control col-md-3" name="email" id="email" placeholder="Email" />
+        </div>
+    </div>
+    <form class="container contact-form my-4 needs-validation" action="#" method="POST" novalidate>
+        <div class="form-group row">
+            <div class="col col-md-6 offset-md-3">
+                <label class="container-fluid p-0">
+                    Name
+                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter your name"
+                        required />
+                </label>
+                <small id="emailHelp" class="form-text text-muted col-12">
+                    * This field is mandatory.
+                </small>
+            </div>
+        </div>
+        <section>
+        <div class="form-group row">
+            <div class="col col-md-6 offset-md-3">
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" class="form-control" id="password" placeholder="Enter your email" required />
+                <div class="valid-feedback">
+                    Your email address is valid.
+                </div>
+                <div class="invalid-feedback">
+                    Your email address is not valid.
+                </div>
+            </div>
+        </section>
+            <div class="form-group row">
+                <div class="col col-md-6 offset-md-3">
+                    <label for="textarea">
+                        Example textarea
+                    </label>
+                    <textarea class="form-control" id="textarea" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col col-md-6 offset-md-3">
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                </div>
+            </div>
+    </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
@@ -314,6 +418,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="./js/github.js"></script>
+    <script src="./js/validate.js"></script>
 </body>
 
 </html>
