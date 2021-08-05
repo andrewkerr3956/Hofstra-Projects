@@ -34,19 +34,13 @@ class Vehicle {
     }
     turnLeft() {
         this.direction = -90;
-        if(this.direction > 359) {
-            this.direction = 359;
-        }
-        else if (this.direction < 0) {
-            this.direction = 0;
-        }
-        else {
-            this.direction = this.direction;
-        }
         console.log('Turned left');
     }
     turnRight() {
         this.direction = 90;
+        console.log('Turned right');
+    }
+    set direction(degrees) {
         if(this.direction > 359) {
             this.direction = 359;
         }
@@ -54,8 +48,7 @@ class Vehicle {
             this.direction = 0;
         }
         else {
-            this.direction = this.direction;
+            return this.direction;
         }
-        console.log('Turned right');
     }
 };
