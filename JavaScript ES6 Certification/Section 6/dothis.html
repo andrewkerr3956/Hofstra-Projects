@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='output'></div>
+    <script>
+        let computers = ["Apple", "IBM", "Commodore", "TRS-80", "Amiga"];
+        computers[0] = "Mac";
+        computers.pop();
+        computers.push('Microsoft');
+        for (let x = 0; x < computers.length; x++) {
+            alert(computers[x]);
+            document.getElementById('output').innerHTML += "<br/>" + computers[x];
+        }
+        
+    </script>
+</body>
+
+</html>

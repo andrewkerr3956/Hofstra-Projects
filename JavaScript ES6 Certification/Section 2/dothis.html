@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        var age = 44; //Positive Integer
+        var status = -100; //Negative Integer
+        var gpa = 3.55; //Float
+        var out = "Age: " + "age";
+        out += "<br/>Status: " + "status";
+        out += "<br/>Gpa: " + "gpa";
+        document.getElementById("output").innerHTML = out;
+    /* Q1: Why do you think the output appear the way it does?
+    Answer: The output appears with the variable names instead of 
+    the value of the variables because the variable name is contained
+    in a string, which will make whatever is contained in the string
+    display as the output (it's a string literal) 
+    (in this case, the variable names).
+    
+    Q2: What does this tell you about double quotes in JavaScript?
+    Answer: This tells us that double quotes will not display the contents
+    of a variable, even if you put the variable in the string, it will instead
+    return the variable name since it is a string literal. */
+    </script>
+</body>
+
+</html>

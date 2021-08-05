@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        var from = prompt("Where do you want to start counting?");
+        var stop = parseInt(prompt("Where do you want to stop counting?"));
+        if (from < stop) {
+            for (var i = from; i < stop + 1; i++) {
+                document.getElementById('output').innerHTML += i + "<br/>";
+            }
+        }
+        else {
+            for (var i = from; i > stop - 1; i--) {
+                document.getElementById('output').innerHTML += i + "<br/>";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

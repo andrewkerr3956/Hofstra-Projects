@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #12</title>
+</head>
+
+<body>
+    <div id='output'></div>
+    <script>
+        let a = prompt('Enter a piece of clothing');
+        let b = prompt('Enter a body part');
+        let c = prompt('Enter a body part');
+        let d = prompt('Enter a verb (base form)');
+        let e = prompt('Enter a body part');
+        let f = prompt('Enter a verb (base form)');
+        let g = prompt('Enter a noun (plural');
+        let h = prompt('Enter a noun (plural');
+        let i = prompt('Enter a verb (base form)');
+
+        out = `<h3>How to do The Floss Dance</h3>
+                1 ) Put on some music <br />
+                2 ) Put on a ${a} (optional) <br />
+                3 ) Stand with your ${b} ever so slightly bent <br />
+                4 ) Put your hands in fists <br />
+                5 ) Place your ${c}, relaxed, at the side of your body <br />
+                6 ) Begin to ${d} your ${e} left and right around your torso in the opposite direction to your hips <br />
+                7 ) Keep doing it and increase speed and ${f} ${g} occasionally for effect <br />
+                After building confidence, you can also ${h} ${i} with your arms if desired, but this is not mandatory.`
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Numbers divisible by 3...</h2>
+    <div id="output"></div>
+    <script>
+        var x = 99;
+        do {
+            if (x % 3 == 0) {
+                document.getElementById('output').innerHTML += " " + x;
+            }
+            x--;
+        } while (x > 0);
+        /* Q: What happens? Do you understand why? 
+        Answer: The loop only runs once. It only runs once since the dowhile
+        loop is guaranteed to iterate at least once.
+        Q: What happens now? Would this be different with a while loop? How
+        and why?
+        Answer: The loop iterates several times. Yes because with a while loop
+        you wouldn't be able to iterate at least once every single time; while
+        loop will only iterate if the condition stays true. */ 
+    </script>
+
+</body>
+
+</html>

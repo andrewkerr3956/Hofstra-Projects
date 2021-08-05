@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        var grade = prompt("Enter a numerical grade (0-100)");
+        var letterGrade;
+        if (grade >= 90) {
+            if (grade >= 97) {
+                letterGrade = 'A+';
+            }
+            else if (grade >= 93) {
+                letterGrade = "A";
+            }
+            else {
+                letterGrade = "A-";
+            }
+        } 
+        else if (grade >= 80) {
+            if (grade >= 87) {
+                letterGrade = 'B+';
+            }
+            else if (grade >= 83) {
+                letterGrade = "B";
+            }
+            else {
+                letterGrade = "B-";
+            }
+        } 
+        else if (grade >= 70) {
+            if (grade >= 77) {
+                letterGrade = 'C+';
+            }
+            else if (grade >= 73) {
+                letterGrade = "C";
+            }
+            else {
+                letterGrade = "C-";
+            }
+        } 
+        else if (grade >= 60) {
+            if (grade >= 67) {
+                letterGrade = 'D+';
+            }
+            else if (grade >= 63) {
+                letterGrade = "D";
+            }
+            else {
+                letterGrade = "D-";
+            }
+        } 
+        else {
+            letterGrade = "F";
+        }
+        document.getElementById('output').innerHTML =
+            "<h2>Letter Grade: " + letterGrade + "</h2>";
+    </script>
+</body>
+
+</html>

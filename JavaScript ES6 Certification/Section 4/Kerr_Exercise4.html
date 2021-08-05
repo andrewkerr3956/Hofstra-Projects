@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #4</title>
+</head>
+<body>
+    <div id='output'></div>
+    <script>
+        let num1 = parseInt(prompt('Enter the first number'));
+        let num2 = parseInt(prompt('Enter the second number'));
+        let operator = prompt('Enter a mathematical operator');
+        let answer = "";
+        let out = "";
+        switch(operator) {
+            case '+':
+                answer = num1 + num2;
+                out = num1 + ' ' + operator + ' ' + num2 + ' = ' + answer;
+                break;
+            case '-':
+                answer = num1 - num2;
+                out = num1 + ' ' + operator + ' ' + num2 + ' = ' + answer;
+                break; 
+            case '*':
+                answer = num1 * num2;
+                out = num1 + ' ' + operator + ' ' + num2 + ' = ' + answer;
+                break;
+            case '/':
+                answer = num1 / num2;
+                out = num1 + ' ' + operator + ' ' + num2 + ' = ' + answer;
+                break;
+            case '%':
+                answer = num1 % num2;
+                out = num1 + ' ' + operator + ' ' + num2 + ' = ' + answer;
+                break;
+            default:
+                out = 'Unrecognized Operator';
+        }
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>

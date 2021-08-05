@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #14</title>
+</head>
+<body>
+    <script src='vehicle.js'></script>
+    <script src='bus.js'></script>
+    <script src='ambulance.js'></script>
+    <script>
+        let car = new Vehicle('red', 300, 20, 60, false);
+        car.accelerate();
+        car.turnRight();
+        let bus = new Bus('green', 200, 10, 80, true, 5);
+        bus.accelerate();
+        let ambulance = new Ambulance('blue', 100, 40, 70, true, true);
+        ambulance.sirenOff();
+        ambulance.sirenOn();
+        ambulance.accelerate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #9</title>
+</head>
+<body>
+    <div id='output'></div>
+    <script>
+        let list = ['Watch TV', 'Play Video Games', 'Eat', 'Watch Dogs', 'Work on courses'];
+        todo = () => { return '<h1>TO-DO:</h1>'};
+        document.getElementById('output').innerHTML += todo();
+        let addTodos = (...params) => {
+            for(let i = 0; i < params.length; i++) {
+                document.getElementById('output').innerHTML += params[i].join('<p> </p>');
+            };
+        } 
+        addTodos(list);
+    </script>
+</body>
+</html>

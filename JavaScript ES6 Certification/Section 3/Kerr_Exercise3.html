@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #3</title>
+</head>
+<body>
+    <div id='output'></div>
+    <script>
+        let operand1 = parseInt(prompt('Enter a number'));
+        let operand2 = parseInt(prompt('Enter a second number'));
+        let out = '<p>What is the sum of operand1 and operand2? <br />';
+        let operation = operand1 + operand2;
+        out += operation + '</p>';
+        out += '<p>What is the result if you subtract operand2 from operand1? <br />';
+        operation = operand1 - operand2;
+        out += operation + '</p>';
+        out += '<p>What is the result if you multiply operand1 by operand2? <br />';
+        operation = operand1 * operand2;
+        out += operation + '</p>';
+        out += '<p>Is operand1 equal to operand2? <br />';
+        operation = operand1 == operand2;
+        out += operation + '</p>';
+        out += '<p>Is operand1 smaller than operand2? <br />';
+        operation = operand1 < operand2;
+        out += operation + '</p>';
+        out += '<p>Can you divide Operand2 evenly in to operand1? <br />';
+        operation = operand2 % operand1 % 2 == 0;
+        out += operation + '</p>';
+
+        document.getElementById('output').innerHTML = out;     
+    </script>
+</body>
+</html>

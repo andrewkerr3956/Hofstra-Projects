@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #10</title>
+</head>
+
+<body>
+    <h1>Campers' Tasks List</h1> 
+    <label for='name'>Camper's Name</label> <br />
+    <input type='text' id='name' name='name' /> <br />
+    <label for='task'>Camper's Task</label> <br />
+    <select id='task' name='task'> <br />
+        <option name='task' value='Front Room Sweep' selected>Front Room Sweep</option>
+        <option name='task' value='Back Room Sweep'>Back Room Sweep</option>
+        <option name='task' value='Outside Grounds'>Outside Grounds</option>
+        <option name='task' value='Clean Toilet'>Clean Toilet</option>
+        <option name='task' value='Clean Sink'>Clean Sink</option>
+        <option name='task' value='Trash Patrol and Supplies'>Trash Patrol and Supplies</option>
+    </select> <br /><br />
+    <button id='btnAddtoMap'>Add to Map</button> <br />
+    <button id='btnDisplayMap'>Display Map</button> 
+    <p><div id='output'></div></p>
+    <script>
+        let campers = new Map();
+        const addToMap = document.getElementById('btnAddtoMap');
+        const displayMap = document.getElementById('btnDisplayMap');
+
+        addToMap.onclick = () => {
+            const name = document.getElementById('name');
+            const task = document.getElementById('task');
+            campers.set(task.value, name.value);
+            name.value = '';
+            task.value = 'Front Room Sweep';
+        }
+
+        displayMap.onclick = () => {
+            let out = '';
+            for(let camper of campers.entries()) {
+                out += camper[0] + ' -> ' + camper[1];
+                out += '<br />';
+            }
+            document.getElementById('output').innerHTML = out;
+        }
+    </script>
+</body>
+
+</html>

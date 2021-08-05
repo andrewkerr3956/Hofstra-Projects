@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #1</title>
+</head>
+<body>
+    <div id='output'></div>
+    <script>
+        // Get user input
+        let prop1 = prompt('Enter proper name.');
+        let prop2 = prompt('Enter a second proper name.');
+        let verb1 = prompt('Enter a verb (use -ing).');
+        let verb2 = prompt('Enter a second verb (use -ing).');
+        let verb3 = prompt('Enter a third verb (use -ing).');
+        let adj1 = prompt('Enter an adjective.');
+        let adj2 = prompt('Enter a second adjective.');
+        let adj3 = prompt('Enter a third adjective.');
+
+        // Put it together in a short story
+        document.getElementById('output').innerHTML = 
+        `${prop1} has been ${adj2} for a long time. <br /> 
+        While ${prop1} was busy, ${prop2} was ${adj1} and ${verb3} at the same time. <br />
+        ${prop2} enjoyed ${adj3} and also ${verb2}. <br />
+        ${prop1} enjoyed ${verb1} and also ${adj3}, just like ${prop2}.`;
+    </script>
+</body>
+</html>

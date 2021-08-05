@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Debug #2</title>
+</head>
+
+<body>
+    <div id='output'></div>
+    <script>
+        var name = prompt('What is your name?');
+        var loc = prompt("In which city or town do you live?");
+        var age = prompt("How old are you?");
+        var pets = prompt("Do you have any pets?");
+        var food = prompt("What is your favorite food?");
+        var out = "This is my friend " + name + '. ';
+        out += name + " lives in " + loc + '. ';
+        out += name + " is " + age + " years old" + '. ';
+        out += name + " likes to eat " + food + '. ';
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+
+</html>

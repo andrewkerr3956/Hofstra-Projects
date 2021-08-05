@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Debug Exercise</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        var salary = parseFloat(prompt("Enter your salary."));
+        var taxRate;
+        if (salary >= 150000) {
+            taxRate = .0155;
+        } else if (salary >= 115000) {
+            taxRate = .0125;
+        } else if (salary >= 92500) {
+            taxRate = 0.11;
+        } else if (salary >= 70000) {
+            taxRate = .095;
+        } else {
+            taxRate = .06;
+        }
+        var taxBill = salary * taxRate;
+        var out = "Tax Rate: " + taxRate + "<br/>";
+        out += "Tax Bill: $" + taxBill;
+        document.getElementById("output").innerHTML = out;
+    </script>
+</body>
+
+</html>

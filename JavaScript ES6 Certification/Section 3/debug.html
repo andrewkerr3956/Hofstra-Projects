@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Debug Me</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <script>
+        var x = 25.55;
+        var y = 19.232;
+        var add = x + y;
+        var mod = x % y;
+        var out = "";
+        out += x + "+" + y + "=" + (x + y);
+        out += "<br/>";
+        out += x + "%" + y + "=" + (x % y);
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>

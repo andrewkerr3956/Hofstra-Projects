@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='output'></div>
+    <script src='realestate.js'></script>
+    <script>
+        let house1 = new listing("A", 50000, 2400, 0, 7000, 570);
+        alert(house1.houseID);
+        house1.buyHouse();
+        house1.repairHouse();
+        house1.sellHouse();
+
+        document.getElementById('output').innerHTML = house1.balance;
+    </script>
+</body>
+
+</html>

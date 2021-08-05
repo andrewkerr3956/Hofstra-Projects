@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #6</title>
+</head>
+
+<body>
+    <div id='output'></div>
+    <script>
+        let gpas = [];
+        let theGpa = "";
+        while (theGpa != "XXX") {
+            theGpa = prompt("Enter a GPA or XXX to Stop");
+            if (theGpa != "XXX") {
+                if (theGpa >= 0 && theGpa <= 4) {
+                    gpas.push(parseFloat(theGpa));
+                }
+            }
+        }
+        // GPA Sorting
+        document.getElementById('output').innerHTML = '<h3>GPAs Sorted (largest to smallest)</h3>';
+        gpas.sort().reverse();
+        for (let x = 0; x < gpas.length; x++) {
+            document.getElementById('output').innerHTML += gpas[x] + '<br />';
+        }
+        // Average of GPAs
+        document.getElementById('output').innerHTML += '<h3>Average of GPAs</h3>';
+        let sum = 0;
+        for (let x = 0; x < gpas.length; x++) {
+            sum += gpas[x];
+        }
+        let average = sum / gpas.length;
+        document.getElementById('output').innerHTML += average;
+        // Highest and Lowest GPAs
+        document.getElementById('output').innerHTML += '<h3>Highest and Lowest GPAs</h3>';
+        let max = gpas[0];
+        let min = gpas[0];
+        for (let x = 0; x < gpas.length; x++) {
+            if (gpas[x] < gpas[x + 1]) {
+                max = gpas[x + 1];
+            }
+        }
+        for (let x = 0; x < gpas.length; x++) {
+            if (gpas[x] > gpas[x + 1]) {
+                min = gpas[x + 1];
+            }
+        }
+        document.getElementById('output').innerHTML += 'Highest: ' + max + '<br /> Lowest: ' + min;
+        // List of Outstanding GPAs
+        document.getElementById('output').innerHTML += '<h3>List of Outstanding GPAs</h3>';
+        let outstanding = [];
+        for (let x = 0; x < gpas.length; x++) {
+            if (gpas[x] > 3.4) {
+                outstanding.push(gpas[x]);
+            }
+        }
+        for (let x = 0; x < outstanding.length; x++) {
+            document.getElementById('output').innerHTML += outstanding[x] + '<br />';
+        }
+    </script>
+</body>
+
+</html>

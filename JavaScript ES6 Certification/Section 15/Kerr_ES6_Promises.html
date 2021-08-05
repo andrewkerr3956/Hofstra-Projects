@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #15</title>
+</head>
+
+<body>
+    <p>
+        <label for='width'>Width</label> <br />
+        <input id='width' type='number' />
+    </p>
+    <p>
+        <label for='height'>Height</label> <br />
+        <input id='height' type='number' />
+    </p>
+    <p>
+        <label for='grayscale'>Request Grayscale</label>
+        <input id='grayscale' type='checkbox' /> <br />
+    </p>
+    <p>
+        <button id='btnGetPicture'>Get Picture</button>
+    </p>
+    <div id='img-holder'></div>
+    <script>
+        const getPicture = document.getElementById('btnGetPicture');
+        document.getElementById('width').defaultValue = 200;
+        document.getElementById('height').defaultValue = 300;
+        getPicture.onclick = () => {
+            const width = document.getElementById('width').value;
+            const height = document.getElementById('height').value;
+            const grayscale = document.getElementById('grayscale').checked;
+            let img = null;
+            imgPromise = new Promise(function (resolve, reject) {
+                img = new Image();
+                img.addEventListener('load', resolve(img));
+                img.addEventListener('error', reject('Image failed to load.'));
+                if (grayscale == true) {
+                    img.src = `https://picsum.photos/${width}/${height}/?random&grayscale`;
+                }
+                else {
+                    img.src = `https://picsum.photos/${width}/${height}/?random`;
+                }
+            });
+
+            imgPromise.then(function (resolve) {
+                console.log('Image successfully loaded.');
+                const imgHolder = document.getElementById('img-holder');
+                imgHolder.appendChild(img);
+            })
+                .catch(function (fromReject) {
+                    console.log(fromReject);
+                });
+        }
+    </script>
+</body>
+
+</html>
