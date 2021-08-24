@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#" id="load">Show me file contents</a>
+    <div id="content"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            url: "file.php",
+            type: "POST",
+            data: {name: "Alex"},
+            success: (data) => {
+                console.log(data);
+            }
+        });
+
+
+
+        /*
+        let content = $("#content");
+
+        setInterval( () => {
+            $.ajax({
+            url: "file.txt",
+            cache: false,
+            success: (data) => {
+                
+                content.text(data);
+            },
+            error: () => {
+                console.log("Something went wrong");
+            }
+        });
+        }, 1000);
+        */
+
+    </script>
+</body>
+
+</html>

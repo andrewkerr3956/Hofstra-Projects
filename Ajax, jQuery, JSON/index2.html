@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery AJAX</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" data-page="home">Home</a></li>
+            <li><a href="#" data-page="downloads">Downloads</a></li>
+            <li><a href="#" data-page="tutorials">Tutorials</a></li>
+        </ul>
+    </nav>
+
+    <section id="main"></section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var app = {
+            nav: $("nav ul li a"),
+            content: $("section#main")
+        };
+
+        app.putContent = function(content) {
+            this.content.html(content);
+        };
+        app.loadPage = function(page) {
+            $.ajax({
+                url: "page.php",
+                type: "get",
+                cache: true,
+                data: {page: page},
+                success: (data) => {
+                    app.putContent(data);
+                },
+                error: () => {
+                    app.putContent("We could not find that page");
+                }
+            })
+        };
+        app.init = function() {
+            app.loadPage("home");
+            app.nav.on("click", function(){
+                let page = $(this).data("page");
+                app.loadPage(page);
+            });
+        }();
+    </script>
+</body>
+</html>
